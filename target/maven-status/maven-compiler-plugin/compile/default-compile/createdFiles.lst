@@ -1,0 +1,5 @@
+hu\webuni\spring\hrtl\gg\web\HRTLController.class
+hu\webuni\spring\hrtl\gg\web\EmployeeController.class
+hu\webuni\spring\hrtl\gg\dto\EmployeeDto.class
+hu\webuni\spring\hrtl\gg\model\Employee.class
+hu\webuni\spring\hrtl\gg\HrtlApplication.class

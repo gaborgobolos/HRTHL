@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Airport Application</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            label{
+               width: 150px;
+               float: left;
+            }  
+            
+        </style> 
+    </head>
+    <body>
+        <h1>Alkalmazottak listázása</h1>
+        <ul>
+            <li th:each="employee: ${employees}">
+                <span th:text="${employee.id}">id</span>
+                <span th:text="${employee.name}">name</span>
+                <span th:text="${employee.jobposition}">job</span>
+                <span th:text="${employee.salary}">job</span>
+                <span th:text="${employee.workstart}">job</span>
+            </li>
+            
+        </ul>
+        <form th:action="@{/employees}" method="post" th:object="${newEmployee}">
+            <p>
+            <label>ID:</label> 
+            <input th:field="*{id}">
+            </p>
+            <p>
+            <label>Name:</label> 
+            <input th:field="*{name}">
+            </p>
+            <p>
+            <label>JobPosition:</label> 
+            <input th:field="*{jobposition}">
+            </p>
+            <p>
+            <label>Salary</label> 
+            <input th:field="*{salary}">
+            </p>
+            <p>
+            <label>Workstart</label> 
+            <input th:field="*{workstart}">
+            </p>
+            <p>
+                <label>&nbsp;</label> 
+                <input type="submit" value="Hozzáadás">
+            </p>
+        </form>
+    </body>
+</html>
